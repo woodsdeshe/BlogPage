@@ -48,13 +48,38 @@ ul {
     background-color: white;
     padding: 0 2rem;
     height: 0rem;
-    min-height: 40vh;
+    min-height: 10vh;
     overflow: hidden;
+    transition: height 1s ease-in-out;
    
 }
 
 .navbar .nav-menu {
     justify-content: space-between;
+}
+
+.navbar .toggle-collapse{
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.navbar .toggle-collapse .toggle-icons i{
+    font-size: 1.4rem;
+    color: var(--text-gray);
+}
+
+.collapse{
+    height: 30rem;
+
 }
 
 .navbar .nav-items {
@@ -68,7 +93,14 @@ ul {
     position:relative;
     font-family: var(--Lato);
     font-size: 1.1rem;
+}
 
+.navbar .nav-items .nav-link:hover{
+    background-color: var(--bluegrn);
+}
+
+.navbar .nav-items .nav-link a:hover{
+    color: var(--floral-white);
 }
 
 .navbar .nav-brand a{
@@ -83,4 +115,27 @@ ul {
     padding: 1.4rem 0 ;
 }
 
+.navbar .social i{
+    padding: 0 .2rem;
+}
+
+.navbar .social i:hover{
+    color:var(--bluegrn)
+}
 /*----------------navbar style---------------*/
+
+
+/* --------------------Viewport <= 750px -----------------*/
+
+@media only screen and (max-width: 750px) {
+    .navbar .nav-menu, .navbar .nav-items{
+        flex-direction: column;
+    }
+
+    .navbar .toggle-collapse{
+        display: initial;
+    }
+}
+
+
+/* --------------------Viewport <= 750px -----------------*/
