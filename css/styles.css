@@ -1,0 +1,25 @@
+html, body {
+    margin:0%;
+    box-sizing:border-box;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*----------------navbar style---------------*/
+.navbar {
+    background-color: white;
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 40vh;
+    overflow: hidden;
+}
+
+.navbar .nav-brand a{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+}
+
+/*----------------navbar style---------------*/
