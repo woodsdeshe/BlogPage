@@ -1,12 +1,47 @@
+@font-face {
+    font-family: 'Lato';
+    src: url(../Lato/Lato-Regular.ttf)
+}
+
 html, body {
     margin:0%;
     box-sizing:border-box;
     overflow: hidden;
 }
 
+:root{
+    /*--------Fonts---------- */
+    --Lato:'Lato';
+
+    /*--------Brand Colors----------*/
+    --text-gray: rgb(43, 45, 66);
+    --text-light: #D3D3D3;
+    --backg-color: #696969;
+    --floral-white: #FBFBF2;
+    --bluegrn: #06BCC1;
+
+
+    /*-------Gradient Background Color-------*/
+    --cotton: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+/*-------------------- Global Styles --------------------*/
 a {
     text-decoration: none;
+    color: var(--text-gray);
 }
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+
+ul {
+    list-style-type: none;
+}
+/*-------------------- Global Styles --------------------*/
 
 /*----------------navbar style---------------*/
 .navbar {
@@ -15,11 +50,37 @@ a {
     height: 0rem;
     min-height: 40vh;
     overflow: hidden;
+   
+}
+
+.navbar .nav-menu {
+    justify-content: space-between;
+}
+
+.navbar .nav-items {
+
+    display: flex;
+    margin:0;
+}
+
+.navbar .nav-items .nav-link {
+    padding: 1.6rem 1em;
+    position:relative;
+    font-family: var(--Lato);
+    font-size: 1.1rem;
+
 }
 
 .navbar .nav-brand a{
     font-size: 1.6rem;
     padding: 1rem 0;
+    display: block;
+    font-family: var(--Lato);
+    font-size: 1.6rem;
+}
+
+.navbar .social {
+    padding: 1.4rem 0 ;
 }
 
 /*----------------navbar style---------------*/
