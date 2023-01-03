@@ -3,6 +3,16 @@
     src: url(../Lato/Lato-Regular.ttf)
 }
 
+@font-face {
+    font-family: 'GreatVibes';
+    src: url(../GreatVibes-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../Raleway-VariableFont_wght.ttf);
+}
+
 html, body {
     margin:0%;
     box-sizing:border-box;
@@ -12,6 +22,8 @@ html, body {
 :root{
     /*--------Fonts---------- */
     --Lato:'Lato';
+    --Raleway:'Raleway';
+    --GreatVibes:'GreatVibes';
 
     /*--------Brand Colors----------*/
     --text-gray: rgb(43, 45, 66);
@@ -19,10 +31,13 @@ html, body {
     --backg-color: #696969;
     --floral-white: #FBFBF2;
     --bluegrn: #06BCC1;
+    --grnhover: #637463;
+  
 
 
     /*-------Gradient Background Color-------*/
     --cotton: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    --greenbtn:linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
 }
 /*-------------------- Global Styles --------------------*/
 a {
@@ -41,6 +56,31 @@ a {
 ul {
     list-style-type: none;
 }
+
+h1{
+    font-family:var(--Raleway);
+    font-size: 2.5rem;
+}
+
+h2{
+    font-family: var(--Raleway);
+}
+
+h3{
+    font-family: var(--Lato);
+    font-size: 1.3rem;
+}
+
+button.btn {
+    border-radius: 2rem;
+    border: none;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: var(--Lato);
+    cursor: pointer;
+
+}
+
 /*-------------------- Global Styles --------------------*/
 
 /*----------------navbar style---------------*/
@@ -91,12 +131,12 @@ ul {
 .navbar .nav-items .nav-link {
     padding: 1.6rem 1em;
     position:relative;
-    font-family: var(--Lato);
+    font-family: var(--Raleway);
     font-size: 1.1rem;
 }
 
 .navbar .nav-items .nav-link:hover{
-    background-color: var(--bluegrn);
+    background-color: var(--grnhover);
 }
 
 .navbar .nav-items .nav-link a:hover{
@@ -107,7 +147,7 @@ ul {
     font-size: 1.6rem;
     padding: 1rem 0;
     display: block;
-    font-family: var(--Lato);
+    font-family: var(--GreatVibes);
     font-size: 1.6rem;
 }
 
@@ -120,9 +160,60 @@ ul {
 }
 
 .navbar .social i:hover{
-    color:var(--bluegrn)
+    color:var(--grnhover)
 }
 /*----------------navbar style---------------*/
+
+
+/*----------------Main Page------------------*/
+
+/*---------------Site Title------------------*/
+
+main .site-title{
+    background: url(../Blog/Blooger_Assets/assets/imageedit_6_4691212972.png);
+    background-size: cover;
+    height:110vh;
+    display:flex;
+    justify-content:center;
+}
+
+main .site-title .site-background{
+    padding-top: 10rem; 
+    text-align: center;
+    color: var(--floral-white);
+}
+main .site-title h1, h3{
+    margin: .3rem;
+}
+
+main .site-title .btn{
+    margin: 1.8rem;
+    background: var(--greenbtn);
+}
+
+main .site-title .btn:hover{
+    background: transparent;
+    border:1px solid var(--floral-white);
+    color: var(--floral-white);
+}
+
+/*---------------Site Title------------------*/
+
+/*------------Blog Carousel---------------*/
+
+main .blog{
+    background: url(../Blog/Blooger_Assets/assets/BlogAbstract.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100vh;
+    width:100%;
+
+}
+
+/*------------Blog Carousel---------------*/
+
+/*----------------Main Page------------------*/
+
 
 
 /* --------------------Viewport <= 750px -----------------*/
